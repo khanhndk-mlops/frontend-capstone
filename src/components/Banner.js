@@ -5,7 +5,7 @@ export default function Banner() {
         <div className="container banner">
             <div className="photo"><img src={food} alt="food"/></div>
             <div className="text">
-                <h2>Little Lemon</h2>
+                <h1>Little Lemon</h1>
                 <p className="subtitle">Melbourne</p>
                 <p>We pride ourselves on offering the highest level of service and hospitality to our valued customers,
                     and with our restaurant booking system, we are making it easier for you to enjoy our world-class
