@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom'
 import food from '../assets/images/food.jpg'
 
 export default function Banner() {
@@ -11,7 +12,7 @@ export default function Banner() {
                     and with our restaurant booking system, we are making it easier for you to enjoy our world-class
                     dining experience. So go ahead and give it a try today – we can't wait to welcome you!
                 </p>
-                <button>Reserve Table</button>
+                <Link to='/booking'><button>Reserve Table</button></Link>
             </div>
         </div>
     )
