@@ -24,14 +24,31 @@ nav ul {
     list-style-type: none;
     display: flex;
     justify-content: flex-end;
-    padding-inline-end: 1rem;
+    padding-inline-start: 0;
+    padding-inline-end: 0;
 }
 
-nav ul li {
+nav ul a {
     /*align-items: stretch;*/
     display: inline;
     padding: 1rem;
     white-space: nowrap;
+    cursor: pointer;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+nav ul a:hover {
+    border-radius: 2rem;
+    background-color: #495e57;
+}
+
+nav ul a:hover li {
+    color: #edefee;
+}
+
+nav ul li a {
+    text-decoration: none;
 }
 
 .container {
@@ -47,7 +64,11 @@ nav ul li {
 
 .header .item {
     height: 3rem;
-    padding: 0.8rem;
+    padding: 0.8rem 0 0.8rem 0.8rem;
+}
+
+.header > a {
+    align-self: center;
 }
 
 .logo {
@@ -56,6 +77,34 @@ nav ul li {
 
 .logo img {
     height: 100%;
+}
+
+.menu-icon {
+    display: none;
+    margin-top: 3vw;
+    height: 18vw;
+}
+
+.menu-icon div {
+    width: 10vw;
+    height: 1vw;
+    margin: 3vw auto 0;
+    background-color: #495e57;
+    transition: 0.4s;
+}
+
+.menu-icon:hover div {
+    background-color: #f4ce14;
+}
+
+.menu-icon.open .bar-1 {
+    transform: translate(0, 4vw) rotate(45deg);
+}
+
+.menu-icon.open .bar-2 {opacity: 0;}
+
+.menu-icon.open .bar-3 {
+    transform: translate(0, -4vw) rotate(-45deg);
 }
 
 .banner {
@@ -148,7 +197,7 @@ article h1::after {
 
 .dish {
     /*min-width: 200px;*/
-    max-width: 300px;
+    max-width: 30%;
     background: white;
     border: 1px solid #495e57;
     border-radius: 0.5rem;
@@ -158,7 +207,7 @@ article h1::after {
 
 .dish img {
     width: 100%;
-    height: 70%;
+    height: 28vw;
     object-fit: cover;
 }
 
@@ -167,14 +216,15 @@ article h1::after {
 }
 
 .dish p {
-    padding: 0 0.6rem;
+    padding: 0 0.6rem 0.8rem;
     font-size: smaller;
     text-align: justify;
-
+    text-overflow: ellipsis;
 }
 
 .comment {
-    max-width: 300px;
+    max-width: 90%;
+    padding-inline: 0.8rem;
 }
 
 .comment p {
@@ -218,7 +268,7 @@ footer * {
 }
 
 footer .text {
-    min-width: 400px;
+    min-width: 40%;
 }
 
 footer.container{
@@ -226,7 +276,7 @@ footer.container{
 }
 
 footer .contact {
-    padding: 2rem 1rem;
+    padding: 2rem;
 }
 
 footer h4 {
@@ -293,13 +343,87 @@ form > div > input[type=text], input[type=tel] {
     }
 }
 
+@media (max-width: 800px) {
+    .testimonials{
+        flex-direction: column;
+        align-items: center;
+        row-gap: 2rem;
+    }
+    .header {
+        grid-template-columns: 1fr;
+    }
+
+    .header .item {
+
+    }
+
+    nav ul {
+        justify-content: space-around;
+    }
+    .logo {
+        text-align: center;
+        padding: 2rem 0;
+        border-bottom: solid 0.1rem;
+        margin-left: unset;
+    }
+}
+
 @media (max-width: 600px) {
     .container {
         width: 100%;
     }
 
-    .specials {
+    .header {
+        grid-template-columns: 1fr 5rem;
+    }
+
+    .header nav.item {
+        grid-column: 1/-1;
+        /*justify-self: stretch;*/
+        padding: 2rem;
+        height: 100%;
+        box-sizing: border-box;
+        border-top: solid 0.2rem;
+    }
+
+    .header nav.close {
+        display: none;
+    }
+
+    nav ul {
         flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul a {
+        padding: 0.6rem;
+    }
+
+    .logo {
+        text-align: left;
+        margin-left: 1rem;
+        border-bottom: none;
+    }
+
+    .menu-icon {
+        display: inline;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .specials, .testimonials{
+        flex-direction: column;
+        align-items: center;
+        row-gap: 2rem;
+    }
+
+    .dish {
+        width: 90%;
+        max-width: unset;
+    }
+
+    .dish img {
+        height: 80vw;
     }
 
     form {
@@ -308,6 +432,14 @@ form > div > input[type=text], input[type=tel] {
 
     form label {
         margin-top: 0.8rem;
+    }
+
+    .banner {
+        flex-direction: column;
+    }
+
+    footer {
+        flex-direction: column;
     }
 }
 
