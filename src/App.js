@@ -16,7 +16,7 @@ function App() {
         occasion: '18:00'
     });
     return (
-        <BrowserRouter>
+        <BrowserRouter basename='/frontend-capstone'>
             <Routes>
                 <Route path='/' element={<Home/>}/>
                 <Route path='/booking'
