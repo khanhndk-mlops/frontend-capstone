@@ -263,10 +263,25 @@ form .submit input:hover {
     background-color: #f4ce14;
 }
 
-.booking {
+form > div > input[type=text], input[type=tel] {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.booking, .confirmation{
     box-sizing: border-box;
     padding: 1.5rem;
 }
+
+.confirmation h1 {
+    margin-bottom: 1rem;
+}
+
+.error {
+    font-size: x-small;
+    color: red;
+}
+
 
 @media (min-width: 900px) {
     .container {
