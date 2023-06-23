@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/frontend-capstone/static/css/main.b5222fe8.css",
-    "main.js": "/frontend-capstone/static/js/main.a7022376.js",
+    "main.js": "/frontend-capstone/static/js/main.629ae378.js",
     "static/js/787.3add4bcd.chunk.js": "/frontend-capstone/static/js/787.3add4bcd.chunk.js",
     "static/media/food.jpg": "/frontend-capstone/static/media/food.cc98b69b023d1447eeba.jpg",
     "static/media/sushi.jpg": "/frontend-capstone/static/media/sushi.68000b5596cd1d4367f2.jpg",
@@ -10,11 +10,11 @@
     "static/media/logo.png": "/frontend-capstone/static/media/logo.d4cae6fac8384c2dae04.png",
     "index.html": "/frontend-capstone/index.html",
     "main.b5222fe8.css.map": "/frontend-capstone/static/css/main.b5222fe8.css.map",
-    "main.a7022376.js.map": "/frontend-capstone/static/js/main.a7022376.js.map",
+    "main.629ae378.js.map": "/frontend-capstone/static/js/main.629ae378.js.map",
     "787.3add4bcd.chunk.js.map": "/frontend-capstone/static/js/787.3add4bcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b5222fe8.css",
-    "static/js/main.a7022376.js"
+    "static/js/main.629ae378.js"
   ]
 }
