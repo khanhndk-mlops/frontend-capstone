@@ -30,11 +30,11 @@ export default function BookingForm(props) {
     function validate(key, value) {
         if (key === 'name') {
             if (value.trim() === '')
-                return 'must not empty';
+                return 'name must not empty';
         }
         if (key === 'phone') {
             if (value.trim() === '')
-                return 'must not empty';
+                return 'phone must not empty';
             let pattern = /^\+*(\d+\s*)+$/;
             if (!pattern.test(value.trim()))
                 return 'not a valid phone number'
